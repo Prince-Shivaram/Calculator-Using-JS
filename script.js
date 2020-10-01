@@ -5,29 +5,10 @@ const updateScreen = (number) => {
 }
 
 const numbers=document.querySelectorAll(".number")
-// const dot=querySelector(".dot")
-// // numbers.forEach((number)=>{
-// // 	number.addEventListener("click",(event)=>{
-// // 		updateScreen(event.target.value)
-// // 	})
-// // })
-
-// dot.addEventListener("click",(event)=>{
-// 	currentInput=
-// })
 
 let prevInput='0'
-let calculationOperator= ''
-let currentInput='0'
-
-// const inputNumber=(number)=>{
-// 	currentInput=number
-// }
-
-// const inputNumber = (number) => {
-// 	currentInput=(currentInput*10)+number
-
-// }
+let calOperator= ''
+let currentInp='0'
 
 const inputNumber = (number)=>{
 	if(currentInput==='0'){
@@ -44,9 +25,6 @@ numbers.forEach((number)=>{
 	})
 })
 
-
-
-
 const operators = document.querySelectorAll(".operator")
 const inputOperator = (operator) => {
     prevInput = currentInput
@@ -60,16 +38,10 @@ operators.forEach((operator) => {
     })
 })
 
-
-
 const equalSign = document.querySelector('.equal-sign')
 
-// equalSign.addEventListener('click', () => {
-//     console.log('equal button is pressed')
-// })
-
 equalSign.addEventListener("click", () => {
-    calculate()
+    calculate();
     updateScreen(currentInput)
 })
 
@@ -95,14 +67,10 @@ const calculate = () => {
     calculationOperator = ''
 }
 
-// const equalSign = document.querySelector('.equal-sign')
-
-
-
 const clearBtn = document.querySelector('.all-clear')
 
 clearBtn.addEventListener('click', () => {
-    console.log('AC button is pressed')
+    console.log('Clear')
 })
 
 const clearAll = () => {
