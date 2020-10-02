@@ -60,6 +60,9 @@ const calculate = () => {
         case '/':
             result = parseInt(prevInput) / parseInt(currentInput)
             break
+	case '%':
+            result = (parseInt(prevInput)/100)*parseInt(currentInput)
+            break
         default:
             return
     }
